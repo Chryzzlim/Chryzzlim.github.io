@@ -67,8 +67,8 @@
   </head>
   <body>
     <div class="wrapper">
-      <h2 class="question">Do You Like Me?????</h2>
-      <img src="https://raw.githubusercontent.com/DzarelDeveloper/Img/main/gifyou.webp" alt="glf" class="glf" />
+      <h2 class="question">Hi babi,</h2>
+      <img src="https://media1.tenor.com/m/K_E6ORTmXMoAAAAC/milk-and-mocha-love.gif" alt="glf" class="glf" />
       <div class="btn-group">
         <button class="yes-btn">Yes</button>
         <button class="no-btn">No</button>
@@ -81,21 +81,37 @@
     const glf = document.querySelector(".glf");
     const yesBtn = document.querySelector(".yes-btn");
     const noBtn = document.querySelector(".no-btn");
+    let noTextIndex = 0;
+    const noTexts = [
+      "Please Don't Say No?",
+      "Please Say yes babi....",
+      "I'm sad, please say yes",
+      "Please Don't click No",
+      "Why u do thsi to me babi",
+      "I'm hurting naaa",
+      "Nooooo, Please say yes!!!",
+      "Please let's valentines together!!!",
+    ];
 
     yesBtn.addEventListener("click", () => {
-      question.innerHTML = "Aaaaack, I like you too!!!";
-      glf.src = "https://raw.githubusercontent.com/DzarelDeveloper/Img/main/gif.webp";
+      question.innerHTML = "Yipeee, lez go on a date! ";
+      glf.src = "https://media1.tenor.com/m/f8lGrzGKWC4AAAAC/milk-and-mocha-bear-couple.gif";
     });
 
-    noBtn.addEventListener("mouseover", () => {
-      const noBtnRect = noBtn.getBoundingClientRect();
-      const maxX = window.innerWidth - noBtnRect.width;
-      const maxY = window.innerHeight - noBtnRect.height;
-      const randomX = Math.floor(Math.random() * maxX);
-      const randomY = Math.floor(Math.random() * maxY);
+    noBtn.addEventListener("click", () => {
+      glf.src = "https://media1.tenor.com/m/kD0GYCeMf4sAAAAC/bubbles-fire.gif";
+      question.innerHTML = "No? Why you gotta be like that? I'm going to ask again!";
+      const currentWidth = parseInt(getComputedStyle(yesBtn).width);
+      const currentHeight = parseInt(getComputedStyle(yesBtn).height);
+      yesBtn.style.width = currentWidth * 1.1 + "px"; // Increase width by 10% each time
+      yesBtn.style.height = currentHeight * 1.1 + "px"; // Increase height by 10% each time
 
-      noBtn.style.left = randomX + "px";
-      noBtn.style.top = randomY + "px";
+      const yesBtnRect = yesBtn.getBoundingClientRect();
+      noBtn.style.left = yesBtnRect.right + 10 + "px"; // 10 pixels offset
+      noBtn.style.top = yesBtnRect.top + "px";
+
+      noBtn.innerText = noTexts[noTextIndex];
+      noTextIndex = (noTextIndex + 1) % noTexts.length;
     });
   </script>
 </html>
