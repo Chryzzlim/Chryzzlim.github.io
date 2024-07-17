@@ -3,115 +3,193 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>For You</title>
+    <title>Happy Birthday</title>
     <style>
-      * {
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
         margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+        background-color: #e0f7fa;
+        font-family: Arial, sans-serif;
+        overflow: hidden;
       }
 
-      body {
+      .flower-container {
         display: flex;
         justify-content: center;
         align-items: center;
-        min-height: 100vh;
-        background: whitesmoke;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        flex-direction: column;
+        margin-bottom: 20px;
       }
 
-      .glf {
-        height: 100%;
-        width: 100%;
-      }
-
-      h2 {
+      h1 {
+        color: #d81b60;
+        margin-top: 20px;
         text-align: center;
-        font-size: 1.5em;
-        color: #e94d58;
-        margin: 15px 0;
       }
 
-      .btn-group {
-        width: 100%;
-        height: 50px;
-        display: flex;
-        justify-content: center;
-        margin-top: 50px;
-      }
-
-      button {
-        position: absolute;
-        width: 150px;
-        height: inherit;
-        color: white;
-        font-size: 1.2em;
-        border-radius: 30px;
-        outline: none;
-        cursor: pointer;
-        box-shadow: 0 2px 4px gray;
-        border: 2px solid #e94d58;
-        font-size: 1.2em;
-      }
-
-      button:nth-child(1) {
-        margin-left: -200px;
-        background: #e94d58;
-      }
-      button:nth-child(2) {
-        margin-right: -200px;
-        background: white;
-        color: #e94d58;
+      p {
+        color: #00695c;
+        max-width: 600px;
+        text-align: center;
+        margin: 10px 0 0;
       }
     </style>
   </head>
   <body>
-    <div class="wrapper">
-      <h2 class="question">Hi babi,</h2>
-      <img src="https://media1.tenor.com/m/K_E6ORTmXMoAAAAC/milk-and-mocha-love.gif" alt="glf" class="glf" />
-      <div class="btn-group">
-        <button class="yes-btn">Yes</button>
-        <button class="no-btn">No</button>
-      </div>
+    <div class="flower-container">
+      <svg class="lotus-flower" width="400" height="230" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+        <title>kblogo1</title>
+        <style>
+          .lotus-flower {
+            cursor: pointer;
+          }
+
+          #center {
+            --open-color: #e5cdda;
+          }
+
+          #l1 {
+            --close-angle: 11deg;
+            --open-color: #7a5278;
+          }
+
+          #l2 {
+            --close-angle: 18deg;
+            --open-color: #7a5278;
+          }
+
+          #l3 {
+            --close-angle: 33deg;
+            --open-color: #5c3d5a;
+          }
+
+          #r1 {
+            --close-angle: -11deg;
+            --open-color: #7a5278;
+          }
+
+          #r2 {
+            --close-angle: -18deg;
+            --open-color: #7a5278;
+          }
+
+          #r3 {
+            --close-angle: -33deg;
+            --open-color: #5c3d5a;
+          }
+
+          #shadow {
+            --close-width: 50%;
+          }
+
+          .lotus-flower:hover .petal-l {
+            transform: rotate(0deg);
+            fill: var(--open-color);
+            stroke: var(--open-color);
+          }
+
+          .petal-l {
+            transform-origin: 50% 80%;
+            transform: rotate(var(--close-angle));
+            transition: transform 1.8s, fill 1s, stroke 1s;
+          }
+
+          .lotus-flower:hover .petal-r {
+            transform: rotate(0deg);
+            fill: var(--open-color);
+            stroke: var(--open-color);
+          }
+
+          .petal-r {
+            transform-origin: 50% 80%;
+            transform: rotate(var(--close-angle));
+            transition: transform 1.8s, fill 1s, stroke 1s;
+          }
+
+          .shadow {
+            rx: 65px;
+            transition: rx 1.8s, fill 1s, stroke 1s;
+          }
+
+          .lotus-flower:hover .shadow {
+            rx: 150.5px;
+          }
+        </style>
+        <defs>
+          <radialGradient r="0.5" cy="0.5" cx="0.5" spreadMethod="pad" id="svg_9">
+            <stop stop-opacity="0.996094" offset="0.358093" stop-color="#020202" />
+            <stop offset="0.990906" stop-opacity="0.003906" stop-color="#f9f6f4" />
+          </radialGradient>
+        </defs>
+        <g>
+          <title>Layer 1</title>
+          <path
+            stroke="#ad85ab"
+            opacity="0.8"
+            class="petal-center"
+            fill="#ad85ab"
+            stroke-width="5"
+            d="m200.24533,20.51144c-6.66667,-0.79083 -36.33333,39.54158 -36,78.29235c0.33333,38.75075 26.33333,76.71068 38,76.71068c11.66667,0 30.33333,-31.63327 31,-74.33819c0.66667,-42.70491 -26.33333,-79.87401 -33,-80.66484z"
+            id="center" />
+          <path
+            stroke="#966793"
+            opacity="0.8"
+            id="l1"
+            class="petal-l"
+            fill="#966793"
+            stroke-width="5"
+            d="m143.58726,26.07116c-6.50521,1.63067 -17.48837,51.65212 -1.30399,89.32257c16.18438,37.67045 55.8425,65.32237 66.65964,61.11905c10.81715,-4.20332 15.16513,-41.77804 -1.712,-83.66497c-16.87713,-41.88692 -57.13844,-68.4073 -63.64365,-66.77665z" />
+          <path
+            stroke="#966793"
+            opacity="0.8"
+            id="r1"
+            class="petal-r"
+            fill="#966793"
+            stroke-width="5"
+            d="m258.4804,26.23559c-5.85724,-3.11212 -49.88698,24.9817 -65.45325,62.16341c-15.56626,37.18172 -7.01082,82.67653 3.80633,86.79903c10.81715,4.1225 41.08402,-19.53777 59.1974,-60.14816c18.11338,-40.61039 8.30676,-85.70215 2.44952,-88.81427l0,-0.00001z" />
+          <ellipse stroke="#bf005f" id="svg_8" cy="186.25001" cx="200.75002" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" fill="#bf005f" />
+          <path
+            opacity="0.8"
+            id="l2"
+            stroke="#7a5278"
+            class="petal-l"
+            fill="#7a5278"
+            stroke-width="5"
+            d="m96.29829,52.30906c-5.39639,4.00892 3.90346,56.34604 33.58192,86.59914c29.67846,30.2531 77.21919,42.0545 85.61149,33.95015c8.3923,-8.10435 -2.21161,-45.95673 -34.17468,-80.01517c-31.96307,-34.05843 -79.62235,-44.54304 -85.01874,-40.53411l0.00001,-0.00001z" />
+          <path
+            opacity="0.8"
+            id="r2"
+            stroke="#7a5278"
+            class="petal-r"
+            fill="#7a5278"
+            stroke-width="5"
+            d="m303.65139,51.75103c-4.19481,-5.25319 -56.17548,5.86753 -85.37439,36.58373c-29.19891,30.7162 -39.33397,78.63983 -30.94167,86.74418c8.3923,8.10435 45.85155,-3.81413 78.77374,-36.94635c32.92219,-33.13222 41.73712,-81.12837 37.54231,-86.38157l0.00001,0.00001z" />
+          <path
+            opacity="0.8"
+            id="r3"
+            stroke="#5c3d5a"
+            class="petal-r"
+            fill="#5c3d5a"
+            stroke-width="5"
+            d="m336.23487,98.71768c-1.92148,-6.44208 -54.28302,-15.60342 -92.86226,1.93804c-38.57925,17.54146 -65.92882,58.17882 -61.18356,68.83685c4.74526,10.65803 43.94162,13.63989 86.87809,-4.74689c42.93647,-18.38679 69.08921,-59.58592 67.16773,-66.028z" />
+          <path
+            stroke="#5c3d5a"
+            opacity="0.8"
+            id="l3"
+            class="petal-l"
+            fill="#5c3d5a"
+            stroke-width="5"
+            d="m63.39541,97.83194c-1.98134,6.43771 22.38232,47.88765 66.04372,67.54774c43.6614,19.66009 82.32769,16.01229 87.15639,4.75093c4.8287,-11.26136 -22.94375,-52.51248 -61.36963,-69.33123c-38.42587,-16.81875 -89.84914,-9.40516 -91.83049,-2.96744l-0.00001,-0.00001z" />
+          <ellipse class="shadow" ry="80.5" rx="110.5" id="shadow" cy="200.75002" cx="200.75002" stroke-opacity="null" stroke-width="0" fill-opacity="0.1" />
+        </g>
+      </svg>
     </div>
+    <h1>Happy Birthday MY AMABEL!</h1>
+    <p>Wishing you a day filled with love, joy, and wonderful memories. May your year ahead be as amazing and unique as you are!</p>
+    <p>This flower is a lotus and a symbol for your birth month. This flower means Purity, dignity, positivity</p>
   </body>
-  <script>
-    const wrapper = document.querySelector(".wrapper");
-    const question = document.querySelector(".question");
-    const glf = document.querySelector(".glf");
-    const yesBtn = document.querySelector(".yes-btn");
-    const noBtn = document.querySelector(".no-btn");
-    let noTextIndex = 0;
-    const noTexts = [
-      "Please Don't Say No?",
-      "Please Say yes babi....",
-      "I'm sad, please say yes",
-      "Please Don't click No",
-      "Why u do thsi to me babi",
-      "I'm hurting naaa",
-      "Nooooo, Please say yes!!!",
-      "Please let's valentines together!!!",
-    ];
-
-    yesBtn.addEventListener("click", () => {
-      question.innerHTML = "Yipeee, lez go on a date! ";
-      glf.src = "https://media1.tenor.com/m/f8lGrzGKWC4AAAAC/milk-and-mocha-bear-couple.gif";
-    });
-
-    noBtn.addEventListener("click", () => {
-      glf.src = "https://media1.tenor.com/m/kD0GYCeMf4sAAAAC/bubbles-fire.gif";
-      question.innerHTML = "No? Why you gotta be like that? I'm going to ask again!";
-      const currentWidth = parseInt(getComputedStyle(yesBtn).width);
-      const currentHeight = parseInt(getComputedStyle(yesBtn).height);
-      yesBtn.style.width = currentWidth * 1.1 + "px"; // Increase width by 10% each time
-      yesBtn.style.height = currentHeight * 1.1 + "px"; // Increase height by 10% each time
-
-      const yesBtnRect = yesBtn.getBoundingClientRect();
-      noBtn.style.left = yesBtnRect.right + 10 + "px"; // 10 pixels offset
-      noBtn.style.top = yesBtnRect.top + "px";
-
-      noBtn.innerText = noTexts[noTextIndex];
-      noTextIndex = (noTextIndex + 1) % noTexts.length;
-    });
-  </script>
 </html>
